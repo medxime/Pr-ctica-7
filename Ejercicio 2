@@ -1,0 +1,23 @@
+//Medina Vega Anel Ximena 
+
+#include <stdio.h>
+
+void main ()
+{
+    int a;
+    
+    printf ("ingrese un numero   ");
+    scanf ("%i", &a);
+    
+    if(a % 2 == 0)
+    {
+        printf("Ese numero es PAR\n");
+    }
+    else
+    {
+        printf("Ese numero es IMPAR\n");
+    }
+    
+    printf ("fin del programa");
+    
+}
