@@ -1,0 +1,87 @@
+//Medina Vega Anel Ximena
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a, b, c;
+    float res;
+
+    do {
+        printf("\nIngrese la operación:\n");
+        printf("1 = suma\n2 = resta\n3 = multiplicación\n4 = división\n5 = raíz\n6 = potencia\n7 = salir\n");
+        scanf("%i", &c);
+
+        switch (c) {
+            case 1: // Suma
+                printf("Ingrese un número:\n");
+                scanf("%i", &a);
+                printf("¿Cuánto le quieres sumar?\n");
+                scanf("%i", &b);
+                res = a + b;
+                printf("Resultado: %.2f\n", res);
+                break;
+
+            case 2: // Resta
+                printf("Ingrese un número:\n");
+                scanf("%i", &a);
+                printf("¿Cuánto le quieres restar?\n");
+                scanf("%i", &b);
+                res = a - b;
+                printf("Resultado: %.2f\n", res);
+                break;
+
+            case 3: // Multiplicación
+                printf("Ingrese el primer número:\n");
+                scanf("%i", &a);
+                printf("Ingrese el segundo número:\n");
+                scanf("%i", &b);
+                res = a * b;
+                printf("Resultado: %.2f\n", res);
+                break;
+
+            case 4: // División
+                printf("Ingrese el numerador:\n");
+                scanf("%i", &a);
+                printf("Ingrese el denominador:\n");
+                scanf("%i", &b);
+                if (b != 0) {
+                    res = (float)a / b;
+                    printf("Resultado: %.2f\n", res);
+                } else {
+                    printf("Error: No se puede dividir entre 0.\n");
+                }
+                break;
+
+            case 5: // Raíz
+                printf("Ingrese el número al que quiere sacarle la raíz cuadrada:\n");
+                scanf("%i", &a);
+                if (a >= 0) {
+                    res = sqrt(a);
+                    printf("Resultado: %.2f\n", res);
+                } else {
+                    printf("Error: No se puede sacar raíz de un número negativo.\n");
+                }
+                break;
+
+            case 6: // Potencia
+                printf("Ingrese la base:\n");
+                scanf("%i", &a);
+                printf("Ingrese el exponente:\n");
+                scanf("%i", &b);
+                res = pow(a, b);
+                printf("Resultado: %.2f\n", res);
+                break;
+
+            case 7: // Salir
+                printf("Saliendo de la calculadora...\n");
+                break;
+
+            default:
+                printf("Opción no válida.\n");
+                break;
+        }
+    } while (c != 7);
+
+    return 0;
+}
